@@ -31,15 +31,17 @@ This resource provides a practical guide for developers who want to:
 
 ## Project Stack:  
 
-| Technology        | Version   | Description                                           |
-|-------------------|-----------|-------------------------------------------------------|
-| 📐 IntelliJ IDEA  | `2024.3`  | Integrated Development Environment (IDE)              |
-| ☕ Java           | `21`      | Backend programming language                          |
-| 🌱 Spring Boot    | `3.4.2`   | Framework for creating Spring applications            |
-| 🐦 Maven          | `3.9.9`   | Build automation and dependency management tool       |
-| 🐘 PostgreSQL     | `17`      | Relational database management system                 |
-| 🏭 RabbitMQ       | `3.13.1`  | Open-source message broker for asynchronous messaging |
-| 🐇  CloudAMQP     | `N/A`     | Managed RabbitMQ service in the cloud                 |
+| Technology        | Version   | Description                                               |
+|-------------------|-----------|-----------------------------------------------------------|
+| 📐 IntelliJ IDEA  | `2024.3`  | Integrated Development Environment (IDE)                  |
+| ☕ Java           | `21`      | Backend programming language                              |
+| 🌱 Spring Boot    | `3.4.2`   | Framework for creating Spring applications                |
+| 🐦 Maven          | `3.9.9`   | Build automation and dependency management tool           |
+| 🐘 PostgreSQL     | `17`      | Relational database management system                     |
+| 🏭 RabbitMQ       | `3.13.1`  | Open-source message broker for asynchronous messaging     |
+| 🐇 CloudAMQP      | `N/A`     | Managed RabbitMQ service in the cloud                     |
+| ✉️ SMTP Gmail     | `N/A`     |Simple Mail Transfer Protocol for sending emails via Gmail |
+| 👩‍🚀 Postman        | `11.19`   | API testing and development tool                          |
 
 ---
 
@@ -59,7 +61,7 @@ This resource provides a practical guide for developers who want to:
 
 ## Checklist:  
 - [X] Creating the *User* and *Email* Microservices with Spring Boot;  
-- [ ] Implementing the *Save Users* Endpoint;  
+- [X] Implementing the *Save Users* Endpoint;  
 - [ ] Establishing a Connection with RabbitMQ on CloudAMQP and Configurations;  
 - [ ] Developing the Consumer;  
 - [ ] Developing the Producer;  
