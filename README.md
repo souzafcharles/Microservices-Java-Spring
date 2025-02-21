@@ -4,7 +4,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/souzafcharles/Microservices-Java-Spring)
 
 
-# Practical Implementation of Microservices with Java Spring and RabbitMQ
+# Microservices with Java Spring and RabbitMQ
 
 ▶️ Project developed based on tutorials by **Michelli Brito** - [Decoder](https://www.michellibrito.com/).
 ***
@@ -62,7 +62,7 @@ This resource provides a practical guide for developers who want to:
 ## Checklist:  
 - [X] Creating the *User* and *Email* Microservices with Spring Boot;  
 - [X] Implementing the *Save Users* Endpoint;  
-- [ ] Establishing a Connection with RabbitMQ on CloudAMQP and Configurations;  
+- [X] Establishing a Connection with RabbitMQ on CloudAMQP and Configurations;  
 - [ ] Developing the Consumer;  
 - [ ] Developing the Producer;  
 - [ ] Executing the Asynchronous Communication Flow Between Microservices;  
