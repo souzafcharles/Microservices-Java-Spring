@@ -66,5 +66,5 @@ This resource provides a practical guide for developers who want to:
 - [X] Developing the Consumer;  
 - [X] Developing the Producer;  
 - [X] Executing the Asynchronous Communication Flow Between Microservices;  
-- [ ] Implementing Email Sending via Gmail SMTP;  
-- [ ] Running the Complete Workflow;  
+- [X] Implementing Email Sending via Gmail SMTP;  
+- [X] Running the Complete Workflow;  
