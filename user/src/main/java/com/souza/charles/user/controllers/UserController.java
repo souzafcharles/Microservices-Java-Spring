@@ -10,15 +10,12 @@ import com.souza.charles.user.dtos.UserRecordDTO;
 import com.souza.charles.user.model.UserModel;
 import com.souza.charles.user.services.UserService;
 import jakarta.validation.Valid;
+import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.UUID;
-
 @RestController
-@RequestMapping(value = "/users")
 public class UserController {
 
     final UserService userService;
@@ -27,34 +24,11 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping
-    public ResponseEntity<UserModel> saveUser(@RequestBody @Valid UserRecordDTO userRecordDTO) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(userService.save(userRecordDTO));
+    @PostMapping("/users")
+    public ResponseEntity<UserModel> saveUser(@RequestBody @Valid UserRecordDTO userRecordDto) {
+        var userModel = new UserModel();
+        BeanUtils.copyProperties(userRecordDto, userModel);
+        return ResponseEntity.status(HttpStatus.CREATED).body(userService.save(userModel));
     }
 
-    @GetMapping
-    public ResponseEntity<List<UserModel>> findAll() {
-        return ResponseEntity.ok(userService.findAll());
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<UserModel> findById(@PathVariable UUID id) {
-        return userService.findById(id)
-                .map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
-    }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<UserModel> updateUser(@PathVariable UUID id, @RequestBody @Valid UserRecordDTO userRecordDTO) {
-        return userService.update(id, userRecordDTO)
-                .map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
-    }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUser(@PathVariable UUID id) {
-        return userService.delete(id)
-                ? ResponseEntity.noContent().build()
-                : ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-    }
 }

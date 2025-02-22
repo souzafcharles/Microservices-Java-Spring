@@ -25,12 +25,13 @@ public class UserProducer {
     private String routingKey;
 
     public void publishMessageEmail(UserModel userModel) {
-        var emailDto = new EmailDTO();
-        emailDto.setUserId(userModel.getUserId());
-        emailDto.setEmailTo(userModel.getEmail());
-        emailDto.setSubject("Registration successfully completed!");
-        emailDto.setText(userModel.getName() + ", welcome! \nThank you for registering, now enjoy all the features of our platform!");
+        var emailDTO = new EmailDTO();
+        emailDTO.setUserId(userModel.getUserId());
+        emailDTO.setEmailTo(userModel.getEmail());
+        emailDTO.setSubject("Registration successfully completed!");
+        emailDTO.setText(userModel.getName() + ", welcome! \nThank you for registering, now enjoy all the features of our platform!");
 
-        rabbitTemplate.convertAndSend("", routingKey, emailDto);
+        rabbitTemplate.convertAndSend("", routingKey, emailDTO);
     }
+
 }

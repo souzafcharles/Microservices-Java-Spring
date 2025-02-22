@@ -64,7 +64,7 @@ This resource provides a practical guide for developers who want to:
 - [X] Implementing the *Save Users* Endpoint;  
 - [X] Establishing a Connection with RabbitMQ on CloudAMQP and Configurations;  
 - [X] Developing the Consumer;  
-- [ ] Developing the Producer;  
-- [ ] Executing the Asynchronous Communication Flow Between Microservices;  
+- [X] Developing the Producer;  
+- [X] Executing the Asynchronous Communication Flow Between Microservices;  
 - [ ] Implementing Email Sending via Gmail SMTP;  
 - [ ] Running the Complete Workflow;  

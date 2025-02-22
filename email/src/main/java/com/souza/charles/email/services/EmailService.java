@@ -34,7 +34,7 @@ public class EmailService {
 
     @Transactional
     public EmailModel sendEmail(EmailModel emailModel) {
-        try {
+        try{
             emailModel.setSendDateEmail(LocalDateTime.now());
             emailModel.setEmailFrom(emailFrom);
 
@@ -45,7 +45,7 @@ public class EmailService {
             emailSender.send(message);
 
             emailModel.setStatusEmail(StatusEmail.SENT);
-        } catch (MailException e) {
+        } catch (MailException e){
             emailModel.setStatusEmail(StatusEmail.ERROR);
         } finally {
             return emailRepository.save(emailModel);

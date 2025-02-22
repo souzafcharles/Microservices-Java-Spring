@@ -18,7 +18,7 @@ import java.util.UUID;
 public class EmailModel implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private UUID emailId;
     private UUID userId;
     private String emailFrom;
