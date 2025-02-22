@@ -6,17 +6,12 @@ package com.souza.charles.user.services;
   Date: February 21, 2025
  */
 
-import com.souza.charles.user.dtos.UserRecordDTO;
 import com.souza.charles.user.model.UserModel;
 import com.souza.charles.user.producers.UserProducer;
 import com.souza.charles.user.repositories.UserRepository;
 import jakarta.transaction.Transactional;
-import org.springframework.beans.BeanUtils;
-import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {

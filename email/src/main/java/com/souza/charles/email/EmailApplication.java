@@ -17,5 +17,4 @@ public class EmailApplication {
         LoadEnvironment.loadEnv();
         SpringApplication.run(EmailApplication.class, args);
     }
-
 }

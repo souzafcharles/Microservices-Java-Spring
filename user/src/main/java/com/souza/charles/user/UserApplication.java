@@ -17,5 +17,4 @@ public class UserApplication {
         LoadEnvironment.loadEnv();
         SpringApplication.run(UserApplication.class, args);
     }
-
 }

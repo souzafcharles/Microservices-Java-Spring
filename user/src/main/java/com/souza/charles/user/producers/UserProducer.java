@@ -33,5 +33,4 @@ public class UserProducer {
 
         rabbitTemplate.convertAndSend("", routingKey, emailDTO);
     }
-
 }
