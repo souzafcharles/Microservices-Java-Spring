@@ -8,6 +8,7 @@ package com.souza.charles.user.services;
 
 import com.souza.charles.user.dtos.UserRecordDTO;
 import com.souza.charles.user.model.UserModel;
+import com.souza.charles.user.producers.UserProducer;
 import com.souza.charles.user.repositories.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.BeanUtils;
@@ -22,13 +23,17 @@ public class UserService {
 
     final UserRepository userRepository;
 
-    public UserService(UserRepository userRepository) {
+    final UserProducer userProducer;
+
+    public UserService(UserRepository userRepository, UserProducer userProducer) {
         this.userRepository = userRepository;
+        this.userProducer = userProducer;
     }
 
     @Transactional
     public UserModel save(UserRecordDTO userRecordDTO) {
         UserModel userModel = new UserModel();
+        userProducer.publishMessageEmail(userModel);
         BeanUtils.copyProperties(userRecordDTO, userModel);
         return userRepository.save(userModel);
     }
