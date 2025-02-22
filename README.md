@@ -63,7 +63,7 @@ This resource provides a practical guide for developers who want to:
 - [X] Creating the *User* and *Email* Microservices with Spring Boot;  
 - [X] Implementing the *Save Users* Endpoint;  
 - [X] Establishing a Connection with RabbitMQ on CloudAMQP and Configurations;  
-- [ ] Developing the Consumer;  
+- [X] Developing the Consumer;  
 - [ ] Developing the Producer;  
 - [ ] Executing the Asynchronous Communication Flow Between Microservices;  
 - [ ] Implementing Email Sending via Gmail SMTP;  
